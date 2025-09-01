@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Blog by John Doe]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Sep 2025 08:08:21 GMT</lastBuildDate><item><title><![CDATA[The Origins of Social Stationery Lettering]]></title><description><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.]]></description><link>https://hong-minji.github.io/works/posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/the-origins-of-social-stationery-lettering</guid><pubDate>Thu, 01 Dec 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Blog by John Doe]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Sep 2025 08:19:03 GMT</lastBuildDate><item><title><![CDATA[테스트 포스트 입니다]]></title><description><![CDATA[테스트 입니디ㅏ.]]></description><link>https://hong-minji.github.io/works/posts/test250901</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/test250901</guid><content:encoded>&lt;p&gt;안녕하세요. 저는 홍민지 입니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/works/static/6df5d1d3054d700b29c7693d2e0f5696/e8950/lamp.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAC4jAAAuIwF4pT92AAADBUlEQVR42hXQTWjUaBwG8HSKZSaTTDKZyZu8yZuPySTznfloM51OZ5Jap52009p1W6mgIAjuiruroquixaIogopfFxV0u35cRPQgVOrHHlxQjyse9LAHBcWDyB60iyh4iPHyv/14nv+DsZIel3ReTRnZPFAMXtF5WYOy5l9Fz0l6RjMyqVQqaRgJLSmrmqgkOFkBksIiGfuORS0uqkauaNZbcUERVIMTJBYiDqmcpGl6OpVOJ3VDS+o+hpLM+xgprChhUV6OAkixvJq37NUbKBZyPhblOMf3rOgK4WG12NQrjl5uZip2ulxnWA4IiJPkmIgwKs7TLE8DXi3UjPp0V08Yj4mBIEVQsWBPgCAIveqma2OZ/rY50DZrLSOb45EEkBQTEEazkBVkiJR0vnzu5P7FizvvLOy7enKrVTJWdGMMTRrVdnbAzdVGi/XRcn2kUC772O8cE8TvyRDJgJM2Tg977297/z/6uvzE857euLAL78YkLpKtuYXBcXPQrTTc3sERTdcBFFkRMTzEfJn2x0xoB3bMev89/Phq6cOrJW/5n79uHgckpqOIL0vNTrnpWrZrNUchEv05AA9phsF6K8WWbTlW/uz8Bu/L46/vHnx+veh5L/6+c8rHmkAWG52KM1Gxxy1nzLLbSFaiTDTKUASJYyBGqSIDouH1Y4X7C9v+ffTHpzcPl67MHd/9I6C6RUCUGhN9Q1N9TqfqdPxwWU2QEdyXITyIsTFKQzEzydbzvMKGjh3a8/bls0AgQAS7UTwo80SpOWmtXNPnTFaHJi17XNaSvgwToWCoB4szNGBIEMWdEpxopi6d+HX55eJUq5RPggjexcXx7OCU6cyY9pqy/YP/AhAkkqYjNB0mScxt5NaNmpunSnMb+++e3/Ls9pHnS6ee3ppfOLiuXRVyCSbVtyo/4BZqrdJAy7QcDkJBgFAUAA+wIz8PXZvv3Dsz/eece/SXztHtaw//NnN618zl+bXXD42d+3147yb3p9mR2Ymh1SONVXZ/f2/OzCcz6UQiIX0D2Ve0oVSDe14AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/works/static/6df5d1d3054d700b29c7693d2e0f5696/8ac56/lamp.webp 240w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/d3be9/lamp.webp 480w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/e46b2/lamp.webp 960w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/f992d/lamp.webp 1440w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/882b9/lamp.webp 1920w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/b84eb/lamp.webp 2000w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/works/static/6df5d1d3054d700b29c7693d2e0f5696/8ff5a/lamp.png 240w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/e85cb/lamp.png 480w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/d9199/lamp.png 960w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/07a9c/lamp.png 1440w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/29114/lamp.png 1920w,
+/works/static/6df5d1d3054d700b29c7693d2e0f5696/e8950/lamp.png 2000w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/works/static/6df5d1d3054d700b29c7693d2e0f5696/d9199/lamp.png&quot;
+            alt=&quot;Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;_나는 할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;오늘-부터-이-블로그를-포프폴리오로&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%EB%B6%80%ED%84%B0-%EC%9D%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%ED%8F%AC%ED%94%84%ED%8F%B4%EB%A6%AC%EC%98%A4%EB%A1%9C&quot; aria-label=&quot;오늘 부터 이 블로그를 포프폴리오로 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 부터 이 블로그를 포프폴리오로&lt;/h2&gt;
+&lt;p&gt;포트폴리오용 입니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lorem ipsum&lt;/strong&gt; 성의껏 살다&lt;/li&gt;
+&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+&lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The Origins of Social Stationery Lettering]]></title><description><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.]]></description><link>https://hong-minji.github.io/works/posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/the-origins-of-social-stationery-lettering</guid><pubDate>Thu, 01 Dec 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis.&lt;/p&gt;
 &lt;p&gt;&lt;span
