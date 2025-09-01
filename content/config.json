@@ -1,10 +1,10 @@
 {
   "title": "Blog by John Doe",
-  "url": "https://lumen.alxshelepenok.com",
+  "url": "https://hong-minji.github.io/works",
   "description": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
   "copyright": "© All rights reserved.",
   "googleAnalyticsId": "G-MSQGQG14PK",
-  "pathPrefix": "/",
+  "pathPrefix": "/works",
   "feedLimit": 4,
   "menu": [
     {
