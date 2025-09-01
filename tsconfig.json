@@ -1,20 +1,34 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react",
     "target": "esnext",
-    "lib": ["dom", "esnext"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "theme-ui",
     "module": "esnext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/internal/*": ["./internal/*"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/mocks": ["./internal/testing/mocks"]
+    },
     "strict": true,
-    "skipLibCheck": true
+    "allowJs": false,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "verbatimModuleSyntax": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "./src/**/*",
-    "./gatsby-node.ts",
-    "./gatsby-config.ts",
-    "./plugins/**/*"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"]
 }

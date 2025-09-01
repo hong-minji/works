@@ -1,0 +1,38 @@
+{
+  "title": "Blog by John Doe",
+  "url": "https://lumen.alxshelepenok.com",
+  "description": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+  "copyright": "© All rights reserved.",
+  "googleAnalyticsId": "G-MSQGQG14PK",
+  "pathPrefix": "/",
+  "feedLimit": 4,
+  "menu": [
+    {
+      "title": "Articles",
+      "url": "/"
+    },
+    {
+      "title": "About me",
+      "url": "/pages/about"
+    },
+    {
+      "title": "Contact me",
+      "url": "/pages/contacts"
+    }
+  ],
+  "author": {
+    "title": "John Doe",
+    "photo": "/logo.png",
+    "description": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "contacts": [
+      {
+        "name": "github",
+        "contact": "alxshelepenok"
+      },
+      {
+        "name": "linkedin",
+        "contact": "alxshelepenok"
+      }
+    ]
+  }
+}

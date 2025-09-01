@@ -1,93 +1,35 @@
-import type { GatsbyConfig, PluginRef } from "gatsby"
-import "dotenv/config"
+import path from "path";
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+import config from "./content/config.json";
+import { type Edge } from "./src/types/edge";
 
-const config: GatsbyConfig = {
+export default {
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
-    siteTitle: `Minimal Blog`,
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
-    siteImage: `/banner.jpg`,
-    siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    url: config.url,
+    menu: config.menu,
+    title: config.title,
+    author: config.author,
+    description: config.description,
+    copyright: config.copyright,
+    feedLimit: config.feedLimit,
   },
-  trailingSlash: `always`,
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
+      resolve: "gatsby-source-filesystem",
       options: {
-        navigation: [
-          {
-            title: `Blog`,
-            slug: `/blog`,
-          },
-          {
-            title: `About`,
-            slug: `/about`,
-          },
-        ],
-        externalLinks: [
-          {
-            name: `Bluesky`,
-            url: `https://bsky.app/profile/lekoarts.de`,
-          },
-          {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
-          },
-        ],
+        name: "content",
+        path: path.resolve("content"),
       },
     },
     {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
-        start_url: `/`,
-        background_color: `#fff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#6B46C1`,
-        display: `standalone`,
-        icons: [
-          {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
           {
             site {
               siteMetadata {
-                title: siteTitle
-                description: siteDescription
-                siteUrl
-                site_url: siteUrl
+                url
               }
             }
           }
@@ -95,84 +37,147 @@ const config: GatsbyConfig = {
         feeds: [
           {
             serialize: ({
-              query: { site, allPost },
+              query: { site, allMarkdownRemark },
             }: {
-              query: { allPost: IAllPost; site: { siteMetadata: ISiteMetadata } }
+              query: {
+                site: {
+                  siteMetadata: {
+                    url: string;
+                  };
+                };
+                allMarkdownRemark: {
+                  edges: Array<Edge>;
+                };
+              };
             }) =>
-              allPost.nodes.map((post) => {
-                const url = site.siteMetadata.siteUrl + post.slug
-                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
-
-                return {
-                  title: post.title,
-                  date: post.date,
-                  excerpt: post.excerpt,
-                  url,
-                  guid: url,
-                  custom_elements: [{ "content:encoded": content }],
+              allMarkdownRemark.edges.map(({ node }) => ({
+                ...node.frontmatter,
+                date: node?.frontmatter?.date,
+                description: node?.frontmatter?.description,
+                url:
+                  site.siteMetadata.url +
+                  (node.frontmatter?.slug || node.fields?.slug),
+                guid:
+                  site.siteMetadata.url +
+                  (node.frontmatter?.slug || node.fields?.slug),
+                custom_elements: [{ "content:encoded": node.html }],
+              })),
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { frontmatter: { date: DESC } },
+                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        date
+                        title
+                        slug
+                        description
+                      }
+                    }
+                  }
                 }
-              }),
-            query: `{
-  allPost(sort: {date: DESC}) {
-    nodes {
-      title
-      date(formatString: "MMMM D, YYYY")
-      excerpt
-      slug
-    }
-  }
-}`,
-            output: `rss.xml`,
-            title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+              }
+            `,
+            output: "/rss.xml",
+            title: config.title,
           },
         ],
       },
     },
-    // You can remove this plugin if you don't need it
-    shouldAnalyseBundle && {
-      resolve: `gatsby-plugin-webpack-statoscope`,
+    {
+      resolve: "gatsby-transformer-remark",
       options: {
-        saveReportTo: `${__dirname}/public/.statoscope/_bundle.html`,
-        saveStatsTo: `${__dirname}/public/.statoscope/_stats.json`,
-        open: false,
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 960,
+              withWebp: true,
+            },
+          },
+          {
+            resolve: "gatsby-remark-responsive-iframe",
+            options: { wrapperStyle: "margin-bottom: 1.0725rem" },
+          },
+          "gatsby-remark-autolink-headers",
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
+          "gatsby-remark-external-links",
+        ],
       },
     },
-  ].filter(Boolean) as Array<PluginRef>,
-}
-
-export default config
-
-interface IPostTag {
-  name: string
-  slug: string
-}
-
-interface IPost {
-  slug: string
-  title: string
-  defer: boolean
-  date: string
-  excerpt: string
-  contentFilePath: string
-  html: string
-  timeToRead: number
-  wordCount: number
-  tags: Array<IPostTag>
-  banner: any
-  description: string
-  canonicalUrl: string
-}
-
-interface IAllPost {
-  nodes: Array<IPost>
-}
-
-interface ISiteMetadata {
-  siteTitle: string
-  siteTitleAlt: string
-  siteHeadline: string
-  siteUrl: string
-  siteDescription: string
-  siteImage: string
-  author: string
-}
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: [config.googleAnalyticsId],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl: url
+              }
+            }
+            allSitePage(
+              filter: {
+                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+              }
+            ) {
+              nodes {
+                path
+              }
+            }
+          }
+        `,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: config.title,
+        short_name: config.title,
+        theme_color: "hsl(31, 92%, 62%)",
+        background_color: "hsl(0, 0%, 100%)",
+        icon: "content/logo.png",
+        display: "standalone",
+        start_url: "/",
+      },
+    },
+    {
+      resolve: "@sentry/gatsby",
+      options: {
+        enableClientWebpackPlugin: false,
+      },
+    },
+    "gatsby-plugin-image",
+    "gatsby-plugin-catch-links",
+    "gatsby-plugin-optimize-svgs",
+    "gatsby-plugin-remove-serviceworker",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        sassOptions: {
+          api: "modern-compiler",
+        },
+      },
+    },
+  ],
+};

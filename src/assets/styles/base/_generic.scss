@@ -1,0 +1,166 @@
+@use "../variables";
+@use "../mixins";
+
+html {
+  font-size: variables.$typography-root-font-size;
+}
+
+body {
+  background: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  font-family: variables.$typography-font-family;
+  font-size: variables.$typography-base-font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: variables.$typography-base-line-height;
+  margin: 0 0 0 calc(100vw - 100%);
+  text-rendering: optimizelegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h2,
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: variables.$typography-font-family;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: variables.$typography-base-font-size * 2.5;
+  @include mixins.line-height(2);
+  @include mixins.margin-top(4);
+  @include mixins.margin-bottom(1);
+}
+
+h2 {
+  font-size: variables.$typography-base-font-size * 1.6875;
+  @include mixins.line-height(1.5);
+  @include mixins.margin-top(2);
+  @include mixins.margin-bottom(0.5);
+}
+
+h3 {
+  font-size: variables.$typography-base-font-size * 1.375;
+  @include mixins.line-height(1);
+  @include mixins.margin-top(2);
+  @include mixins.margin-bottom(0.5);
+}
+
+h4 {
+  font-size: variables.$typography-base-font-size * 1.2;
+  @include mixins.line-height(1);
+  @include mixins.margin-top(1.5);
+  @include mixins.margin-bottom(0.5);
+}
+
+h5 {
+  font-size: variables.$typography-base-font-size;
+  @include mixins.line-height(1);
+  @include mixins.margin-top(2.5);
+  @include mixins.margin-bottom(0.5);
+}
+
+h6 {
+  font-size: variables.$typography-base-font-size;
+  @include mixins.line-height(1);
+  @include mixins.margin-top(2.5);
+  @include mixins.margin-bottom(0.5);
+}
+
+img {
+  border: 0;
+  display: block;
+  max-width: 100%;
+}
+
+hr {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 1px,
+    transparent 11px,
+    hsl(var(--color-foreground)) 11px,
+    hsl(var(--color-foreground)) 15px,
+    transparent 15px,
+    transparent 26px
+  );
+  background-size: 100% 26px;
+  border: 0;
+  color: hsl(var(--color-foreground));
+  display: block;
+  height: 26px;
+  margin: 52px auto;
+  width: 100px;
+}
+
+a {
+  color: hsl(var(--color-foreground));
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: hsl(var(--color-primary));
+  }
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+ul {
+  list-style: square;
+  @include mixins.margin-bottom(1);
+
+  & li {
+    margin-bottom: 10px;
+    padding: 0 5px;
+  }
+}
+
+p {
+  @include mixins.line-height(1);
+  @include mixins.margin-bottom(1);
+}
+
+blockquote {
+  font-style: italic;
+  padding: 0;
+  text-align: center;
+}
+
+figure {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+figcaption {
+  @include mixins.line-height(0.75);
+  @include mixins.margin-top(0.25);
+  color: hsl(var(--color-foreground));
+  font-size: variables.$typography-small-font-size;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@include mixins.breakpoint-sm {
+  figure.float-left,
+  figure.float-right {
+    max-width: 310px;
+    @include mixins.padding(0, 1, 0, 1);
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .float-left {
+    float: left;
+  }
+}

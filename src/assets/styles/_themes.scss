@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@use "variables";
+@use "functions";
+
+:root {
+  color-scheme: light;
+
+  @each $key, $value in variables.$light-color-palette {
+    --color-#{$key}: #{functions.hslToList($value)};
+  }
+}
+
+.dark {
+  color-scheme: dark;
+
+  @each $key, $value in variables.$dark-color-palette {
+    --color-#{$key}: #{functions.hslToList($value)};
+  }
+}

@@ -1,0 +1,93 @@
+@use "sass:string";
+@use "sass:list";
+
+@function strSplit($string, $separator) {
+  $i: string.index($string, $separator);
+
+  @if $i {
+    @return list.append(
+        string.slice($string, 1, $i - 1), strSplit(string.slice($string, $i + string.length($separator)), $separator)
+    );
+  }
+
+  @return $string;
+}
+
+@function listMap($list, $fn) {
+  $result: ();
+
+  @for $i from 1 through list.length($list) {
+    $result: list.append($result, $fn(list.nth($list, $i)));
+  }
+
+  @return $result;
+}
+
+@function hslToList($hsl) {
+  $hsl: #{$hsl};
+  $hsl: string.slice($hsl, 5, -1);
+  $hsl: string.slice($hsl, 0, string.length($hsl) - 1);
+  $hsl: replace($hsl, ", ", " ", 1);
+
+  @return $hsl;
+}
+
+@function capitalize($string) {
+  @return string.to-upper-case(string.slice($string, 1, 1)) + string.slice($string, 2);
+}
+
+@function concat($str1, $str2) {
+  @return $str1 + $str2;
+}
+
+@function replace($string, $substr, $newSubstr, $all: 0) {
+  $string: string.quote(#{$string});
+  $substr: string.quote(#{$substr});
+  $newSubstr: string.quote(#{$newSubstr});
+  $position-found: string.index($string, $substr);
+  $processed: ();
+
+  @while ($position-found and $position-found > 0) {
+    $length-substr: string.length($substr);
+    @if (1 != $position-found) {
+      $processed: list.append($processed, string.slice($string, 0, $position-found - 1));
+    }
+    $processed: list.append($processed, $newSubstr);
+    $string: string.slice($string, $position-found + $length-substr);
+
+    $position-found: 0;
+
+    @if ($all > 0) {
+      $position-found: string.index($string, $substr);
+    }
+  }
+
+  $processed: list.append($processed, $string);
+  $string: "";
+
+  @each $s in $processed {
+    $string: #{$string}#{$s};
+  }
+
+  @return $string;
+}
+
+@function camelCase($string) {
+  $string: string.quote(#{$string});
+  $progress: $string;
+  $result: "";
+  $exclude: (" ", "-", "–", "—", "_", ",", ";", ":", ".", "+", "=", "?", "&", "*", "/", "|", ">", "<", "(", ")");
+
+  @while string.length($progress) > 0  {
+    $char: string.slice($progress, 1, 1);
+    @if list.index($exclude, $char) {
+      $progress: capitalize(string.slice($progress, 2, 2)) + string.slice($progress, 3);
+    }
+    @else {
+      $result: $result + $char;
+      $progress: string.slice($progress, 2);
+    }
+  }
+
+  @return $result;
+}
