@@ -173,7 +173,32 @@ export default {
     "gatsby-plugin-image",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-optimize-svgs",
-    "gatsby-plugin-remove-serviceworker",
+    // Replaced gatsby-plugin-remove-serviceworker with offline for better cache control
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        precachePages: ["/", "/posts/*"],
+        workboxConfig: {
+          globPatterns: ["**/icon-*"],
+          runtimeCaching: [
+            {
+              urlPattern: /^https?:.*\/page-data\/.*\.json/,
+              handler: "NetworkFirst",
+            },
+            {
+              urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+              handler: "StaleWhileRevalidate",
+            },
+            {
+              urlPattern: /^https?:.*\/static\/.*/,
+              handler: "CacheFirst",
+            },
+          ],
+          skipWaiting: true,
+          clientsClaim: true,
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-sass",
       options: {
