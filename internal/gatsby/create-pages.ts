@@ -5,6 +5,7 @@ import { templates } from "./constants/templates";
 import { tagsQuery } from "./queries/tags-query";
 import { pagesQuery } from "./queries/pages-query";
 import { postsQuery } from "./queries/posts-query";
+import { notionPostsQuery } from "./queries/notion-posts-query";
 import { metadataQuery } from "./queries/metadata-query";
 import { categoriesQuery } from "./queries/categories-query";
 import { toKebabCase } from "../../src/utils/to-kebab-case";
@@ -59,6 +60,27 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
         path: node?.frontmatter?.slug || node.fields.slug,
         component: templates.postTemplate,
         context: { slug: node.fields.slug },
+      });
+    }
+  });
+
+  // Create pages for NotionPost nodes
+  const notionPosts = await notionPostsQuery(graphql);
+
+  notionPosts?.edges?.forEach((edge) => {
+    const { node } = edge;
+
+    if (node?.slug || node?.fields?.slug) {
+      const slug = node?.slug || node?.fields?.slug;
+      const template = node?.template || "post";
+
+      createPage({
+        path: slug,
+        component: template === "page" ? templates.pageTemplate : templates.postTemplate,
+        context: {
+          slug,
+          isNotionPost: true
+        },
       });
     }
   });

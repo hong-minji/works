@@ -9,6 +9,7 @@ import { toKebabCase } from "../../src/utils/to-kebab-case";
 const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
+  // Handle MarkdownRemark nodes
   if (node.internal.type === "MarkdownRemark") {
     const { frontmatter, parent } = node as Node & Edge["node"];
     const { tags, category, slug } = frontmatter || {};
@@ -32,6 +33,26 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, actions, getNode }) =>
     if (category) {
       const value = concat(routes.categoryRoute, "/", toKebabCase(category));
 
+      createNodeField({ node, name: "categorySlug", value });
+    }
+  }
+
+  // Handle NotionPost nodes
+  if (node.internal.type === "NotionPost") {
+    const notionNode = node as any;
+    const { tags, category, slug } = notionNode;
+
+    if (slug) {
+      createNodeField({ node, name: "slug", value: concat("/", slug) });
+    }
+
+    if (tags && tags.length > 0) {
+      const value = tags.map((tag: string) => concat(routes.tagRoute, "/", toKebabCase(tag), "/"));
+      createNodeField({ node, name: "tagSlugs", value });
+    }
+
+    if (category) {
+      const value = concat(routes.categoryRoute, "/", toKebabCase(category));
       createNodeField({ node, name: "categorySlug", value });
     }
   }

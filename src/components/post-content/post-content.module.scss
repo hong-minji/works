@@ -59,6 +59,174 @@
     img {
       max-width: 100%;
     }
+
+    // Modern table styling
+    table {
+      width: 100%;
+      max-width: variables.$layout-post-width; // Same as content width
+      margin: 3rem auto;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.95rem;
+      position: relative;
+      background: hsl(var(--color-background));
+
+      // Subtle shadow with gradient border effect
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 16px;
+        padding: 2px;
+        background: linear-gradient(
+          135deg,
+          hsl(var(--color-primary) / 0.3),
+          hsl(var(--color-primary) / 0.1),
+          transparent
+        );
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      // Soft shadow
+      box-shadow:
+        0 0 0 1px hsl(var(--color-border) / 0.2),
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      border-radius: 16px;
+      overflow: hidden;
+
+      // Table header (when detected)
+      thead {
+        background: linear-gradient(
+          135deg,
+          hsl(var(--color-muted)) 0%,
+          hsl(var(--color-background)) 100%
+        );
+        border-bottom: 2px solid hsl(var(--color-primary) / 0.15);
+
+        th {
+          padding: 1.25rem 1.5rem;
+          text-align: left;
+          font-weight: 600;
+          font-size: 0.875rem;
+          color: hsl(var(--color-foreground) / 0.9);
+          text-transform: uppercase;
+          letter-spacing: 0.8px;
+          position: relative;
+
+          &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 25%;
+            height: 50%;
+            width: 1px;
+            background: hsl(var(--color-border) / 0.3);
+          }
+        }
+      }
+
+      // Table body
+      tbody {
+        tr {
+          position: relative;
+
+          &:not(:last-child) {
+            td {
+              border-bottom: 1px solid hsl(var(--color-border) / 0.1);
+            }
+          }
+        }
+
+        td {
+          padding: 1.25rem 1.5rem;
+          color: hsl(var(--color-foreground) / 0.85);
+          position: relative;
+          vertical-align: middle;
+
+          // First column styling (label column)
+          &:first-child {
+            font-weight: 500;
+            color: hsl(var(--color-foreground));
+            position: relative;
+            padding-left: 1.75rem;
+          }
+
+          // Links in tables
+          a {
+            color: hsl(var(--color-primary));
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              width: 0;
+              height: 1px;
+              background: hsl(var(--color-primary));
+              transition: width 0.2s ease;
+            }
+
+            &:hover::after {
+              width: 100%;
+            }
+          }
+
+          // Strong/bold text in cells
+          strong {
+            color: hsl(var(--color-foreground));
+            font-weight: 600;
+          }
+        }
+      }
+
+      // When there's no header (all data rows)
+      &:not(:has(thead)) {
+        tbody {
+          tr:first-child {
+            td {
+              padding-top: 1.5rem;
+            }
+          }
+
+          tr:last-child {
+            td {
+              padding-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+
+    // Dark mode adjustments
+    .dark & {
+      table {
+        &::before {
+          background: linear-gradient(
+            135deg,
+            hsl(var(--color-primary) / 0.2),
+            hsl(var(--color-primary) / 0.05),
+            transparent
+          );
+        }
+
+        thead {
+          background: linear-gradient(
+            135deg,
+            hsl(var(--color-muted) / 0.8) 0%,
+            hsl(var(--color-background)) 100%
+          );
+        }
+
+      }
+    }
   }
 }
 

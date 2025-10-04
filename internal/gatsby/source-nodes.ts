@@ -1,0 +1,91 @@
+import type { GatsbyNode, SourceNodesArgs } from "gatsby";
+import { createContentDigest } from "gatsby-core-utils";
+import { fetchNotionPages } from "../notion/fetch-pages";
+import { transformNotionPage } from "../notion/transform";
+
+export const sourceNodes: GatsbyNode["sourceNodes"] = async ({
+  actions,
+  createNodeId,
+  reporter,
+}: SourceNodesArgs) => {
+  const { createNode } = actions;
+
+  reporter.info("🔍 Fetching Notion pages...");
+
+  try {
+    const pages = await fetchNotionPages();
+
+    if (pages.length === 0) {
+      reporter.warn("⚠️  No pages found in Notion database. Make sure you have published pages.");
+      return;
+    }
+
+    reporter.info(`📄 Found ${pages.length} pages in Notion database`);
+
+    let successCount = 0;
+    let errorCount = 0;
+
+    for (const page of pages) {
+      try {
+        const { frontmatter, content } = await transformNotionPage(page);
+
+        if (frontmatter.draft) {
+          reporter.info(`⏭️  Skipping draft: ${frontmatter.title}`);
+          continue;
+        }
+
+        // Skip if essential fields are missing
+        if (!frontmatter.title || !frontmatter.slug) {
+          reporter.warn(`⚠️  Skipping page ${page.id}: Missing required fields (title or slug)`);
+          errorCount++;
+          continue;
+        }
+
+        const nodeData = {
+          ...frontmatter,
+          content,
+          notionId: page.id,
+          createdTime: page.created_time,
+          lastEditedTime: page.last_edited_time,
+        };
+
+        createNode({
+          ...nodeData,
+          id: createNodeId(`NotionPost-${page.id}`),
+          parent: null,
+          children: [],
+          internal: {
+            type: "NotionPost",
+            contentDigest: createContentDigest(nodeData),
+            mediaType: "text/html",
+            content: content,
+          },
+        });
+
+        reporter.info(`✅ Created node: ${frontmatter.title}`);
+        successCount++;
+      } catch (pageError) {
+        errorCount++;
+        reporter.error(`❌ Failed to process page ${page.id}:`, pageError as Error);
+        // Continue processing other pages
+      }
+    }
+
+    if (successCount > 0) {
+      reporter.success(`🎉 Successfully created ${successCount} NotionPost nodes`);
+
+      if (errorCount > 0) {
+        reporter.warn(`⚠️  Failed to process ${errorCount} pages. Check the logs above for details.`);
+      }
+    } else if (errorCount > 0) {
+      reporter.panicOnBuild(
+        `❌ Failed to create any nodes. ${errorCount} pages had errors.`
+      );
+    }
+  } catch (error) {
+    reporter.panicOnBuild(
+      "❌ Failed to source Notion pages",
+      error as Error
+    );
+  }
+};

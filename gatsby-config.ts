@@ -1,4 +1,7 @@
 import path from "path";
+import dotenv from "dotenv";
+
+dotenv.config({ path: `.env.${process.env.NODE_ENV || 'development'}` });
 
 import config from "./content/config.json";
 import { type Edge } from "./src/types/edge";
