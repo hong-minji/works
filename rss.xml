@@ -1,39 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hong Minji - Creative Marketer]]></title><description><![CDATA[Hong Minji - Creative Marketer]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Sep 2025 11:49:45 GMT</lastBuildDate><item><title><![CDATA[파이콘 한국 2025 : LAB 오프라인 홍보]]></title><description><![CDATA[파이콘 한국 2025에 참가하여 모두의연구소 LAB 프로그램 인지도를 높이고, 오프라인 부스 운영을 통해 온라인 오피스 아워 신청을 목표 대비 168% 초과 달성한 프로젝트입니다. 짧은 준비 기간에도 불구하고, 창의적인 기획과 운영으로 높은 성과를 이끌어낸 과정을 담았습니다.]]></description><link>https://hong-minji.github.io/works/posts/pycon-korea-2025</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/pycon-korea-2025</guid><pubDate>Sun, 17 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;프로젝트-개요&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;프로젝트 개요 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 개요&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;프로젝트명: 모두의연구소 LAB 개설을 위한 파이콘 한국 2025 참가&lt;/li&gt;
-&lt;li&gt;역할: 부스 운영 기획, 디자인, 실행 총괄&lt;/li&gt;
-&lt;li&gt;진행 기간: 2025년 8월 (총2일)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;배경-및-목표&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%EA%B2%BD-%EB%B0%8F-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;배경 및 목표 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배경 및 목표&lt;/h3&gt;
-&lt;p&gt;파이썬 기반 AI 개발자들이 모이는 국내 최대 컨퍼런스인 파이콘 한국 2025에 참가하여 모두의연구소 LAB 프로그램의 인지도를 높이는 것이 목표였습니다. 기존 고객뿐만 아니라 잠재적 예비 연구원들과 직접 만나 소통하고, 궁극적으로 LAB 개설로 이어질 수 있는 온라인 오피스 아워 신청을 100건 이상 확보하고자 했습니다.&lt;/p&gt;
-&lt;h3 id=&quot;핵심-성과&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%95%B5%EC%8B%AC-%EC%84%B1%EA%B3%BC&quot; aria-label=&quot;핵심 성과 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;핵심 성과&lt;/h3&gt;
-&lt;p&gt;오피스 아워 신청 목표치 168% 초과 달성: 목표 100건 대비 168건의 신청을 받아냈으며, 이는 모두의연구소 플랫폼에 실명 인증 회원으로 전환되는 의미 있는 성과를 창출했습니다.&lt;/p&gt;
-&lt;p&gt;효과적인 통합 홍보: LAB 홍보물 183부 외에도 아이펠과 기업교육 홍보물까지 총 300여 부를 배포하며 모두의연구소의 다양한 사업을 효과적으로 알렸습니다.&lt;/p&gt;
-&lt;p&gt;네트워킹 확장: 한국아이디지 기자와 보도자료 협력을 논의하고, IT 기업 HR 관계자와 채용 연계 가능성을 모색하는 등 추후 비즈니스로 이어질 수 있는 중요한 관계를 구축했습니다.&lt;/p&gt;
-&lt;h3 id=&quot;문제-해결-과정-및-실행-전략&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EA%B3%BC%EC%A0%95-%EB%B0%8F-%EC%8B%A4%ED%96%89-%EC%A0%84%EB%9E%B5&quot; aria-label=&quot;문제 해결 과정 및 실행 전략 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제 해결 과정 및 실행 전략&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;마케팅 전략: 타겟에 집중한 맞춤형 경험 설계&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;컨퍼런스 특성상 준비 기간이 짧았지만, 저는 개발자들이 무엇에 흥미를 느끼는지 정확히 파악하는 데 집중했습니다. 모두의연구소의 ‘연구·교육 플랫폼’이라는 정체성을 명확히 전달하는 동시에, 개발자들의 관심사인 ‘바이브코딩’을 활용한 이벤트를 기획했습니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;콘텐츠 기획: 방문객에게 모두의연구소의 가치를 효과적으로 전달하기 위해 ‘파이썬하면 AI, AI하면 모두의연구소’라는 명확한 메시지로 대화를 시작했습니다. 단순히 LAB을 소개하는 데 그치지 않고, 연구의 즐거움과 협업의 가치를 강조하며 잠재 연구원들의 흥미를 유발했습니다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;이벤트 제작: 개발자들과 친밀감을 형성하기 위해 직접 코딩하여 만든 룰렛 서비스를 활용했습니다. 룰렛이 돌아가는 애니메이션과 사운드를 추가하여 이목을 집중시켰고, 개발자들은 공통의 관심사를 통해 친근하게 다가왔습니다. 이는 단순한 경품 이벤트가 아닌, 브랜드와 고객 간의 자연스러운 라포 형성으로 이어졌습니다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;크리에이티브 기획: 정보의 명확성과 비주얼적 통일성 확보&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;부스 디자인부터 홍보물까지 일관된 비주얼 아이덴티티를 구축하여 브랜드 인지도를 높였습니다. LAB, 아이펠, 기업교육 등 각 프로그램의 특징을 담은 리플렛을 제작해 방문객들이 한눈에 정보를 파악할 수 있도록 했습니다. 특히 ‘오피스 아워’ 신청으로 이어지는 QR 코드를 눈에 잘 띄게 배치하여 행동 전환율을 높였습니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;운영 및 실행: 효율적인 사용자 여정 설계&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;현장에서 방문객들은 ‘모두의연구소 소개 → LAB 소개 및 혜택 안내 → 스몰 토크 → 온라인 설명회 및 룰렛 이벤트 안내 → 신청 및 추첨’으로 이어지는 체계적인 사용자 여정을 경험했습니다. 단순 홍보에 그치지 않고, 플랫폼 가입 및 실명 인증이라는 다음 단계로 자연스럽게 유도하여 오프라인 접점을 온라인 성과로 연결하는 데 성공했습니다.&lt;/p&gt;
-&lt;h3 id=&quot;기여-및-배운-점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EC%97%AC-%EB%B0%8F-%EB%B0%B0%EC%9A%B4-%EC%A0%90&quot; aria-label=&quot;기여 및 배운 점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기여 및 배운 점&lt;/h3&gt;
-&lt;p&gt;이번 프로젝트를 통해 ‘작은 예산과 짧은 준비 기간에도, 대상과 목표를 명확히 설정하고 창의적인 접근을 더하면 큰 효과를 낼 수 있다’는 점을 다시 한번 확인했습니다.&lt;/p&gt;
-&lt;p&gt;또한, 현장에서 ‘모두의연구소가 비영리 단체로 오해받는 경우가 많다’는 피드백을 통해, 앞으로 ‘연구·교육 플랫폼’으로서의 정체성을 더욱 선명하게 전달해야 할 필요성을 깨달았습니다. 단순한 홍보를 넘어, 고객의 목소리를 듣고 다음 전략에 반영하는 데이터 기반 의사결정의 중요성을 체감한 의미 있는 경험이었습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The Origins of Social Stationery Lettering]]></title><description><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.]]></description><link>https://hong-minji.github.io/works/posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/the-origins-of-social-stationery-lettering</guid><pubDate>Thu, 01 Dec 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Blog by John Doe]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 04 Oct 2025 09:56:34 GMT</lastBuildDate><item><title><![CDATA[The Origins of Social Stationery Lettering]]></title><description><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.]]></description><link>https://hong-minji.github.io/works/posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/the-origins-of-social-stationery-lettering</guid><pubDate>Thu, 01 Dec 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -153,57 +118,7 @@
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
-&lt;p&gt;Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The Quantum Leap in Digital Architecture]]></title><description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porttitor metus velit, vitae vehicula massa venenatis sed. Duis tempus enim quam, in interdum ex dapibus in.]]></description><link>https://hong-minji.github.io/works/posts/quantum-leap-digital-architecture</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/quantum-leap-digital-architecture</guid><pubDate>Thu, 01 Sep 2016 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/works/static/14a757c94d7ffb632ec309d049c669b1/35f32/image.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB6BQhiT//xAAcEAACAQUBAAAAAAAAAAAAAAABAgADERMiMkH/2gAIAQEAAQUC9htB2H1erjb/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAhEAABAgQHAAAAAAAAAAAAAAAAARECEiExMkFxgYLB8P/aAAgBAQAGPwLziW62KrDyuSVs7kETYqaEsrtmp//EAB0QAAICAgMBAAAAAAAAAAAAABEhAAExUUFxsZH/2gAIAQEAAT8hrsdHbyUAwIXyz9SxI2KXpNhKOdvEJzWgKyxDolbLU//aAAwDAQACAAMAAAAQg9//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAADAAIDAQAAAAAAAAAAAAABESEAMUFRkaH/2gAIAQEAAT8QIoFrMp5kvzhsBkoJnAH9YAlWAYQbPeEHk7lCLHqZUAPuQBbwcWQY4CzM/9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/works/static/14a757c94d7ffb632ec309d049c669b1/8ac56/image.webp 240w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/d3be9/image.webp 480w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/e46b2/image.webp 960w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/f992d/image.webp 1440w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/882b9/image.webp 1920w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/061e5/image.webp 5753w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/works/static/14a757c94d7ffb632ec309d049c669b1/09b79/image.jpg 240w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/7cc5e/image.jpg 480w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/6a068/image.jpg 960w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/644c5/image.jpg 1440w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/0f98f/image.jpg 1920w,
-/works/static/14a757c94d7ffb632ec309d049c669b1/35f32/image.jpg 5753w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/jpeg&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/works/static/14a757c94d7ffb632ec309d049c669b1/6a068/image.jpg&quot;
-            alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
-            title=&quot;&quot;
-            loading=&quot;lazy&quot;
-            decoding=&quot;async&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non.&lt;/p&gt;
-&lt;p&gt;Nam vestibulum accumsan nisl. Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio. Nunc porta vulputate tellus. Nunc rutrum turpis sed pede. Sed bibendum. Aliquam posuere. Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Exploring the Depths of Innovation]]></title><description><![CDATA[Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.]]></description><link>https://hong-minji.github.io/works/posts/exploring-depths-of-innovation</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/exploring-depths-of-innovation</guid><pubDate>Thu, 01 Sep 2016 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.&lt;/p&gt;
+&lt;p&gt;Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Exploring the Depths of Innovation]]></title><description><![CDATA[Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.]]></description><link>https://hong-minji.github.io/works/posts/exploring-depths-of-innovation</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/exploring-depths-of-innovation</guid><pubDate>Thu, 01 Sep 2016 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
@@ -253,7 +168,57 @@
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A Brief History of Typography]]></title><description><![CDATA[Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.]]></description><link>https://hong-minji.github.io/works/posts/a-brief-history-of-typography</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/a-brief-history-of-typography</guid><pubDate>Tue, 02 Feb 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
+&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The Quantum Leap in Digital Architecture]]></title><description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porttitor metus velit, vitae vehicula massa venenatis sed. Duis tempus enim quam, in interdum ex dapibus in.]]></description><link>https://hong-minji.github.io/works/posts/quantum-leap-digital-architecture</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/quantum-leap-digital-architecture</guid><pubDate>Thu, 01 Sep 2016 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/works/static/14a757c94d7ffb632ec309d049c669b1/35f32/image.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB6BQhiT//xAAcEAACAQUBAAAAAAAAAAAAAAABAgADERMiMkH/2gAIAQEAAQUC9htB2H1erjb/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAhEAABAgQHAAAAAAAAAAAAAAAAARECEiExMkFxgYLB8P/aAAgBAQAGPwLziW62KrDyuSVs7kETYqaEsrtmp//EAB0QAAICAgMBAAAAAAAAAAAAABEhAAExUUFxsZH/2gAIAQEAAT8hrsdHbyUAwIXyz9SxI2KXpNhKOdvEJzWgKyxDolbLU//aAAwDAQACAAMAAAAQg9//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAADAAIDAQAAAAAAAAAAAAABESEAMUFRkaH/2gAIAQEAAT8QIoFrMp5kvzhsBkoJnAH9YAlWAYQbPeEHk7lCLHqZUAPuQBbwcWQY4CzM/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/works/static/14a757c94d7ffb632ec309d049c669b1/8ac56/image.webp 240w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/d3be9/image.webp 480w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/e46b2/image.webp 960w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/f992d/image.webp 1440w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/882b9/image.webp 1920w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/061e5/image.webp 5753w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/works/static/14a757c94d7ffb632ec309d049c669b1/09b79/image.jpg 240w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/7cc5e/image.jpg 480w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/6a068/image.jpg 960w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/644c5/image.jpg 1440w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/0f98f/image.jpg 1920w,
+/works/static/14a757c94d7ffb632ec309d049c669b1/35f32/image.jpg 5753w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/works/static/14a757c94d7ffb632ec309d049c669b1/6a068/image.jpg&quot;
+            alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non.&lt;/p&gt;
+&lt;p&gt;Nam vestibulum accumsan nisl. Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio. Nunc porta vulputate tellus. Nunc rutrum turpis sed pede. Sed bibendum. Aliquam posuere. Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A Brief History of Typography]]></title><description><![CDATA[Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.]]></description><link>https://hong-minji.github.io/works/posts/a-brief-history-of-typography</link><guid isPermaLink="false">https://hong-minji.github.io/works/posts/a-brief-history-of-typography</guid><pubDate>Tue, 02 Feb 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
 &lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
