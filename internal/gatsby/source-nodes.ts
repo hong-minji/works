@@ -34,11 +34,13 @@ export const sourceNodes: GatsbyNode["sourceNodes"] = async ({
           continue;
         }
 
-        // Skip if essential fields are missing
-        if (!frontmatter.title || !frontmatter.slug) {
-          reporter.warn(`⚠️  Skipping page ${page.id}: Missing required fields (title or slug)`);
-          errorCount++;
-          continue;
+        // No need to skip pages anymore - we handle missing fields with fallbacks
+        // Log info about pages that needed fallback values
+        if (!page.properties.Title && !page.properties.Name) {
+          reporter.info(`📝 Using generated title for page ${page.id}`);
+        }
+        if (!page.properties.Slug) {
+          reporter.info(`📝 Generated slug for: ${frontmatter.title}`);
         }
 
         const nodeData = {

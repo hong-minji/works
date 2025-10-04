@@ -1,7 +1,7 @@
 import { type CreatePagesArgs } from "gatsby";
 
 interface TagsQueryResult {
-  allMarkdownRemark: {
+  allNotionPost: {
     group: Array<{
       fieldValue: string;
       totalCount: number;
@@ -12,12 +12,12 @@ interface TagsQueryResult {
 const tagsQuery = async (graphql: CreatePagesArgs["graphql"]) => {
   const result = await graphql<TagsQueryResult>(`
     {
-      allMarkdownRemark(
+      allNotionPost(
         filter: {
-          frontmatter: { template: { eq: "post" }, draft: { ne: true } }
+          template: { eq: "post" }, draft: { ne: true }
         }
       ) {
-        group(field: { frontmatter: { tags: SELECT } }) {
+        group(field: { tags: SELECT }) {
           fieldValue
           totalCount
         }
@@ -25,7 +25,7 @@ const tagsQuery = async (graphql: CreatePagesArgs["graphql"]) => {
     }
   `);
 
-  return result?.data?.allMarkdownRemark?.group || [];
+  return result?.data?.allNotionPost?.group || [];
 };
 
 export { tagsQuery };

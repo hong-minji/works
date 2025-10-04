@@ -9,12 +9,25 @@ import { Layout } from "@/components/layout";
 import { Sidebar } from "@/components/sidebar";
 import { Pagination } from "@/components/pagination";
 import { useSiteMetadata } from "@/hooks/use-site-metadata";
-import type { AllMarkdownRemark } from "@/types/all-markdown-remark";
 import type { PageContext } from "@/types/page-context";
 
 interface CategoryTemplateProps {
   data: {
-    allMarkdownRemark: AllMarkdownRemark;
+    allNotionPost: {
+      edges: Array<{
+        node: {
+          fields: {
+            categorySlug: string;
+            slug: string;
+          };
+          slug: string;
+          title: string;
+          date: string;
+          description: string;
+          category: string;
+        };
+      }>;
+    };
   };
   pageContext: PageContext;
 }
@@ -23,7 +36,22 @@ const CategoryTemplate: FC<CategoryTemplateProps> = ({ data, pageContext }) => {
   const { group, pagination } = pageContext;
   const { prevPagePath, nextPagePath, hasPrevPage, hasNextPage } = pagination;
 
-  const { edges } = data.allMarkdownRemark;
+  // Transform NotionPost data to match Feed component format
+  const edges = data.allNotionPost.edges.map(edge => ({
+    node: {
+      fields: {
+        categorySlug: edge.node.fields?.categorySlug || '/category/uncategorized',
+        slug: edge.node.fields?.slug || edge.node.slug
+      },
+      frontmatter: {
+        title: edge.node.title,
+        date: edge.node.date,
+        description: edge.node.description,
+        category: edge.node.category,
+        slug: edge.node.slug
+      }
+    }
+  }));
 
   return (
     <Layout>
@@ -43,17 +71,15 @@ const CategoryTemplate: FC<CategoryTemplateProps> = ({ data, pageContext }) => {
 
 export const query = graphql`
   query CategoryTemplate($group: String, $limit: Int!, $offset: Int!) {
-    allMarkdownRemark(
+    allNotionPost(
       limit: $limit
       skip: $offset
       filter: {
-        frontmatter: {
-          category: { eq: $group }
-          template: { eq: "post" }
-          draft: { ne: true }
-        }
+        category: { eq: $group }
+        template: { eq: "post" }
+        draft: { ne: true }
       }
-      sort: { frontmatter: { date: DESC } }
+      sort: { date: DESC }
     ) {
       edges {
         node {
@@ -61,13 +87,11 @@ export const query = graphql`
             slug
             categorySlug
           }
-          frontmatter {
-            description
-            category
-            title
-            date
-            slug
-          }
+          slug
+          title
+          date
+          category
+          description
         }
       }
     }

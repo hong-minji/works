@@ -9,11 +9,24 @@ import { Sidebar } from "@/components/sidebar";
 import { Pagination } from "@/components/pagination";
 import { useSiteMetadata } from "@/hooks/use-site-metadata";
 import { type PageContext } from "@/types/page-context";
-import { type AllMarkdownRemark } from "@/types/all-markdown-remark";
 
 interface TagTemplateProps {
   data: {
-    allMarkdownRemark: AllMarkdownRemark;
+    allNotionPost: {
+      edges: Array<{
+        node: {
+          fields: {
+            categorySlug: string;
+            slug: string;
+          };
+          slug: string;
+          title: string;
+          date: string;
+          description: string;
+          category: string;
+        };
+      }>;
+    };
   };
   pageContext: PageContext;
 }
@@ -21,7 +34,23 @@ interface TagTemplateProps {
 const TagTemplate: FC<TagTemplateProps> = ({ data, pageContext }) => {
   const { group, pagination } = pageContext;
   const { prevPagePath, nextPagePath, hasPrevPage, hasNextPage } = pagination;
-  const { edges } = data.allMarkdownRemark;
+
+  // Transform NotionPost data to match Feed component format
+  const edges = data.allNotionPost.edges.map(edge => ({
+    node: {
+      fields: {
+        categorySlug: edge.node.fields?.categorySlug || '/category/uncategorized',
+        slug: edge.node.fields?.slug || edge.node.slug
+      },
+      frontmatter: {
+        title: edge.node.title,
+        date: edge.node.date,
+        description: edge.node.description,
+        category: edge.node.category,
+        slug: edge.node.slug
+      }
+    }
+  }));
 
   return (
     <Layout>
@@ -47,17 +76,15 @@ export const query = graphql`
         description
       }
     }
-    allMarkdownRemark(
+    allNotionPost(
       limit: $limit
       skip: $offset
       filter: {
-        frontmatter: {
-          tags: { in: [$group] }
-          template: { eq: "post" }
-          draft: { ne: true }
-        }
+        tags: { in: [$group] }
+        template: { eq: "post" }
+        draft: { ne: true }
       }
-      sort: { frontmatter: { date: DESC } }
+      sort: { date: DESC }
     ) {
       edges {
         node {
@@ -65,13 +92,11 @@ export const query = graphql`
             slug
             categorySlug
           }
-          frontmatter {
-            title
-            date
-            category
-            description
-            slug
-          }
+          slug
+          title
+          date
+          category
+          description
         }
       }
     }

@@ -46,15 +46,42 @@ export async function transformNotionPage(
     return undefined;
   };
 
+  // Helper to generate a slug from title or page ID
+  const generateSlug = (title: string, pageId: string): string => {
+    if (title) {
+      // Convert title to slug format
+      return title
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-') // Replace spaces with hyphens
+        .replace(/^-+|-+$/g, ''); // Trim hyphens from start and end
+    }
+    // Fallback to page ID if no title
+    return `post-${pageId.slice(0, 8)}`;
+  };
+
+  // Get title with fallback
+  const title = getText(properties.Title) || getText(properties.Name) || `Untitled ${page.id.slice(0, 8)}`;
+
+  // Get slug with fallback generation
+  const rawSlug = getText(properties.Slug);
+  const slug = rawSlug || generateSlug(title, page.id);
+
+  // Get date with fallback to created time
+  const date = getDate(properties.Date) || page.created_time.split('T')[0];
+
+  // Get template with better defaults
+  const template = (getSelect(properties.Template) || "post") as "post" | "page";
+
   const frontmatter: NotionPostFrontmatter = {
-    title: getText(properties.Title),
-    slug: getText(properties.Slug),
-    date: getDate(properties.Date),
-    category: getSelect(properties.Category),
+    title,
+    slug,
+    date,
+    category: getSelect(properties.Category) || "uncategorized",
     tags: getMultiSelect(properties.Tags),
-    description: getText(properties.Description),
+    description: getText(properties.Description) || "",
     draft: getCheckbox(properties.Draft),
-    template: getSelect(properties.Template) as "post" | "page",
+    template,
     socialImage: getFiles(properties["Social Image"]),
   };
 
