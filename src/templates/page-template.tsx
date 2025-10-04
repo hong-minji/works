@@ -1,7 +1,6 @@
 import React, { type FC } from "react";
 import { graphql } from "gatsby";
 
-import { type Node } from "@/types/node";
 import { Meta } from "@/components/meta";
 import { Page } from "@/components/page";
 import { Layout } from "@/components/layout";
@@ -10,14 +9,31 @@ import { useSiteMetadata } from "@/hooks/use-site-metadata";
 
 interface PageTemplateProps {
   data: {
-    markdownRemark: Node;
+    notionPost?: {
+      id: string;
+      title: string;
+      content: string;
+      description?: string;
+      date?: string;
+    };
   };
 }
 
 const PageTemplate: FC<PageTemplateProps> = ({ data }) => {
-  const { html: body } = data.markdownRemark;
-  const { frontmatter } = data.markdownRemark;
-  const { title } = frontmatter;
+  const post = data.notionPost;
+
+  if (!post) {
+    return (
+      <Layout>
+        <Sidebar />
+        <Page title="Page Not Found">
+          <div>This page could not be found.</div>
+        </Page>
+      </Layout>
+    );
+  }
+
+  const { content: body, title } = post;
 
   return (
     <Layout>
@@ -31,17 +47,12 @@ const PageTemplate: FC<PageTemplateProps> = ({ data }) => {
 
 export const query = graphql`
   query PageTemplate($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    notionPost(slug: { eq: $slug }) {
       id
-      html
-      frontmatter {
-        title
-        date
-        description
-        socialImage {
-          publicURL
-        }
-      }
+      title
+      content
+      description
+      date
     }
   }
 `;
@@ -49,20 +60,19 @@ export const query = graphql`
 export const Head: FC<PageTemplateProps> = ({ data }) => {
   const { title, description, url } = useSiteMetadata();
 
-  const {
-    frontmatter: {
-      title: pageTitle,
-      description: pageDescription = description || "",
-      socialImage,
-    },
-  } = data.markdownRemark;
-  const image = socialImage?.publicURL && url.concat(socialImage?.publicURL);
+  const post = data.notionPost;
+
+  if (!post) {
+    return <Meta title={`Page Not Found - ${title}`} description={description || ""} />;
+  }
+
+  const pageTitle = post.title;
+  const pageDescription = post.description || description || "";
 
   return (
     <Meta
       title={`${pageTitle} - ${title}`}
       description={pageDescription}
-      image={image}
     />
   );
 };

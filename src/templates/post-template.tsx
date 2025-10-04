@@ -33,84 +33,45 @@ interface NotionPostNode {
 
 interface PostTemplateProps {
   data: {
-    markdownRemark?: Node;
     notionPost?: NotionPostNode;
   };
 }
 
 const PostTemplate: FC<PostTemplateProps> = ({ data }) => {
-  const { markdownRemark, notionPost } = data;
+  const { notionPost } = data;
 
-  if (notionPost) {
-    // Debug: Log the raw markdown content
-    console.log('Raw markdown content:', notionPost.content);
-
-    // Convert markdown content to HTML (marked supports GFM tables by default)
-    const htmlContent = marked(notionPost.content || '');
-
-    // Debug: Log the converted HTML
-    console.log('Converted HTML content:', htmlContent);
-
-    // Debug: Check if tables are present
-    if (htmlContent.includes('<table>')) {
-      console.log('✅ Tables found in HTML');
-    } else {
-      console.log('❌ No tables found in HTML');
-    }
-
-    const adaptedPost = {
-      id: notionPost.id,
-      html: htmlContent,
-      fields: notionPost.fields || {
-        slug: notionPost.slug,
-        tagSlugs: [],
-      },
-      frontmatter: {
-        title: notionPost.title,
-        date: notionPost.date,
-        tags: notionPost.tags,
-        description: notionPost.description,
-        socialImage: notionPost.socialImage ? { publicURL: notionPost.socialImage } : undefined,
-      },
-    };
-
-    return (
-      <Layout>
-        <Post post={adaptedPost as any} />
-      </Layout>
-    );
+  if (!notionPost) {
+    return null;
   }
 
-  if (markdownRemark) {
-    return (
-      <Layout>
-        <Post post={markdownRemark} />
-      </Layout>
-    );
-  }
+  // Convert markdown content to HTML (marked supports GFM tables by default)
+  const htmlContent = marked(notionPost.content || '');
 
-  return null;
+  const adaptedPost = {
+    id: notionPost.id,
+    html: htmlContent,
+    fields: notionPost.fields || {
+      slug: notionPost.slug,
+      tagSlugs: [],
+    },
+    frontmatter: {
+      title: notionPost.title,
+      date: notionPost.date,
+      tags: notionPost.tags,
+      description: notionPost.description,
+      socialImage: notionPost.socialImage ? { publicURL: notionPost.socialImage } : undefined,
+    },
+  };
+
+  return (
+    <Layout>
+      <Post post={adaptedPost as any} />
+    </Layout>
+  );
 };
 
 export const query = graphql`
   query PostTemplate($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      html
-      fields {
-        slug
-        tagSlugs
-      }
-      frontmatter {
-        date
-        tags
-        title
-        description
-        socialImage {
-          publicURL
-        }
-      }
-    }
     notionPost(slug: { eq: $slug }) {
       id
       title
@@ -131,25 +92,13 @@ export const query = graphql`
 
 export const Head: FC<PostTemplateProps> = ({ data }) => {
   const { title, description, url } = useSiteMetadata();
-  const { markdownRemark, notionPost } = data;
+  const { notionPost } = data;
 
-  const postData = notionPost || markdownRemark;
+  if (!notionPost) return null;
 
-  if (!postData) return null;
-
-  const postTitle = notionPost
-    ? notionPost.title
-    : markdownRemark?.frontmatter?.title || "";
-
-  const postDescription = notionPost
-    ? notionPost.description
-    : markdownRemark?.frontmatter?.description || description || "";
-
-  const socialImage = notionPost
-    ? notionPost.socialImage
-    : markdownRemark?.frontmatter?.socialImage?.publicURL;
-
-  const image = socialImage && url.concat(socialImage);
+  const postTitle = notionPost.title;
+  const postDescription = notionPost.description || description || "";
+  const image = notionPost.socialImage && url.concat(notionPost.socialImage);
 
   return (
     <Meta
