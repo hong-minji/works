@@ -14,7 +14,21 @@ import type { PageContext } from "@/types/page-context";
 
 interface IndexTemplateProps {
   data: {
-    allMarkdownRemark: AllMarkdownRemark;
+    allNotionPost: {
+      edges: Array<{
+        node: {
+          fields: {
+            categorySlug: string;
+            slug: string;
+          };
+          slug: string;
+          title: string;
+          date: string;
+          description: string;
+          category: string;
+        };
+      }>;
+    };
   };
   pageContext: PageContext;
 }
@@ -23,7 +37,22 @@ const IndexTemplate: FC<IndexTemplateProps> = ({ data, pageContext }) => {
   const { pagination } = pageContext;
   const { hasNextPage, hasPrevPage, prevPagePath, nextPagePath } = pagination;
 
-  const { edges } = data.allMarkdownRemark;
+  // Transform NotionPost data to match Feed component format
+  const edges = data.allNotionPost.edges.map(edge => ({
+    node: {
+      fields: {
+        categorySlug: edge.node.fields?.categorySlug || '/category/uncategorized',
+        slug: edge.node.fields?.slug || edge.node.slug
+      },
+      frontmatter: {
+        title: edge.node.title,
+        date: edge.node.date,
+        description: edge.node.description,
+        category: edge.node.category,
+        slug: edge.node.slug
+      }
+    }
+  }));
 
   return (
     <Layout>
@@ -43,11 +72,11 @@ const IndexTemplate: FC<IndexTemplateProps> = ({ data, pageContext }) => {
 
 export const query = graphql`
   query IndexTemplate($limit: Int!, $offset: Int!) {
-    allMarkdownRemark(
+    allNotionPost(
       limit: $limit
       skip: $offset
-      sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+      sort: { date: DESC }
+      filter: { template: { eq: "post" }, draft: { ne: true } }
     ) {
       edges {
         node {
@@ -55,13 +84,12 @@ export const query = graphql`
             categorySlug
             slug
           }
-          frontmatter {
-            description
-            category
-            title
-            date
-            slug
-          }
+          slug
+          title
+          date
+          description
+          category
+          template
         }
       }
     }

@@ -1,8 +1,8 @@
 {
-  "title": "Blog by John Doe",
+  "title": "Hong Minji",
   "url": "https://hong-minji.github.io/works",
-  "description": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
-  "copyright": "© All rights reserved.",
+  "description": "Marketing × Design × AI. Building growth through creativity and community",
+  "copyright": "© Hong Minji All rights reserved.",
   "googleAnalyticsId": "G-MSQGQG14PK",
   "pathPrefix": "/works",
   "feedLimit": 4,
@@ -21,17 +21,21 @@
     }
   ],
   "author": {
-    "title": "John Doe",
-    "photo": "/logo.png",
-    "description": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "title": "Hong Minji",
+    "photo": "/profile.jpg",
+    "description": "Creative Marketer | AI Contents | Conference & Event Design | MODULABS Community",
     "contacts": [
       {
-        "name": "github",
-        "contact": "alxshelepenok"
+        "name": "linkedin",
+        "contact": "hongminji"
       },
       {
-        "name": "linkedin",
-        "contact": "alxshelepenok"
+        "name": "instagram",
+        "contact": "hong.min.ji"
+      },
+      {
+        "name": "email",
+        "contact": "miji.hong.mj@gmail.com"
       }
     ]
   }

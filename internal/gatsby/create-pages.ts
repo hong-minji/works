@@ -44,25 +44,24 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
     context: {},
   });
 
-  const pages = await pagesQuery(graphql);
-
-  pages.forEach((edge) => {
-    const { node } = edge;
-
-    if (node?.frontmatter?.template === "page" && node?.fields?.slug) {
-      createPage({
-        path: node?.frontmatter?.slug || node.fields.slug,
-        component: templates.pageTemplate,
-        context: { slug: node.fields.slug },
-      });
-    } else if (node?.frontmatter?.template === "post" && node?.fields?.slug) {
-      createPage({
-        path: node?.frontmatter?.slug || node.fields.slug,
-        component: templates.postTemplate,
-        context: { slug: node.fields.slug },
-      });
-    }
-  });
+  // Disable markdown posts - only use Notion posts
+  // const pages = await pagesQuery(graphql);
+  // pages.forEach((edge) => {
+  //   const { node } = edge;
+  //   if (node?.frontmatter?.template === "page" && node?.fields?.slug) {
+  //     createPage({
+  //       path: node?.frontmatter?.slug || node.fields.slug,
+  //       component: templates.pageTemplate,
+  //       context: { slug: node.fields.slug },
+  //     });
+  //   } else if (node?.frontmatter?.template === "post" && node?.fields?.slug) {
+  //     createPage({
+  //       path: node?.frontmatter?.slug || node.fields.slug,
+  //       component: templates.postTemplate,
+  //       context: { slug: node.fields.slug },
+  //     });
+  //   }
+  // });
 
   // Create pages for NotionPost nodes
   const notionPosts = await notionPostsQuery(graphql);
@@ -151,8 +150,8 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
 
   const path = routes.indexRoute;
   const template = templates.indexTemplate;
-  const posts = await postsQuery(graphql);
-  const total = Math.ceil((posts?.edges?.length ?? 0) / postsLimit);
+  // Use Notion posts instead of markdown posts for pagination
+  const total = Math.ceil((notionPosts?.edges?.length ?? 0) / postsLimit);
 
   for (let page = 0; page < total; page += 1) {
     createWithPagination({
