@@ -30,45 +30,51 @@ h6 {
 }
 
 h1 {
-  font-size: variables.$typography-base-font-size * 2.5;
-  @include mixins.line-height(2);
-  @include mixins.margin-top(4);
-  @include mixins.margin-bottom(1);
+  // Font size: 70% of original (2.5 * 0.7 = 1.75)
+  font-size: variables.$typography-base-font-size * 1.75;
+  @include mixins.line-height(1.5);
+  @include mixins.margin-top(3);
+  @include mixins.margin-bottom(0.75);
 }
 
 h2 {
-  font-size: variables.$typography-base-font-size * 1.6875;
-  @include mixins.line-height(1.5);
-  @include mixins.margin-top(2);
-  @include mixins.margin-bottom(0.5);
+  // Font size: 70% of original (1.6875 * 0.7 = 1.18125)
+  font-size: variables.$typography-base-font-size * 1.18125;
+  @include mixins.line-height(1.25);
+  @include mixins.margin-top(1.5);
+  @include mixins.margin-bottom(0.35);
 }
 
 h3 {
-  font-size: variables.$typography-base-font-size * 1.375;
-  @include mixins.line-height(1);
-  @include mixins.margin-top(2);
-  @include mixins.margin-bottom(0.5);
+  // Font size: 70% of original (1.375 * 0.7 = 0.9625)
+  font-size: variables.$typography-base-font-size * 0.9625;
+  @include mixins.line-height(0.85);
+  @include mixins.margin-top(1.5);
+  @include mixins.margin-bottom(0.35);
 }
 
 h4 {
-  font-size: variables.$typography-base-font-size * 1.2;
-  @include mixins.line-height(1);
-  @include mixins.margin-top(1.5);
-  @include mixins.margin-bottom(0.5);
+  // Font size: 70% of original (1.2 * 0.7 = 0.84)
+  font-size: variables.$typography-base-font-size * 0.84;
+  @include mixins.line-height(0.85);
+  @include mixins.margin-top(1.25);
+  @include mixins.margin-bottom(0.35);
 }
 
 h5 {
-  font-size: variables.$typography-base-font-size;
-  @include mixins.line-height(1);
-  @include mixins.margin-top(2.5);
-  @include mixins.margin-bottom(0.5);
+  // Font size: 70% of original (1.0 * 0.7 = 0.7)
+  font-size: variables.$typography-base-font-size * 0.7;
+  @include mixins.line-height(0.85);
+  @include mixins.margin-top(2);
+  @include mixins.margin-bottom(0.35);
 }
 
 h6 {
-  font-size: variables.$typography-base-font-size;
-  @include mixins.line-height(1);
-  @include mixins.margin-top(2.5);
-  @include mixins.margin-bottom(0.5);
+  // Font size: 70% of original (1.0 * 0.7 = 0.7)
+  font-size: variables.$typography-base-font-size * 0.7;
+  @include mixins.line-height(0.85);
+  @include mixins.margin-top(2);
+  @include mixins.margin-bottom(0.35);
 }
 
 img {
