@@ -11,7 +11,8 @@
 
   .title {
     font-weight: 600;
-    font-size: variables.$typography-base-font-size * 2.5;
+    font-size: variables.$typography-base-font-size * 2.5 * 0.7; // 70% of original size
+    color: hsl(var(--color-foreground) / 0.6); // Gray color (60% opacity)
     @include mixins.line-height(2);
     @include mixins.margin-top(0);
     @include mixins.margin-bottom(1.45);
