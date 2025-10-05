@@ -21,6 +21,233 @@
     font-size: variables.$typography-base-font-size;
     @include mixins.line-height(1);
     @include mixins.margin(0, 0, 1);
+
+    // Typography styles
+    p {
+      font-size: variables.$typography-base-font-size;
+      @include mixins.line-height(1);
+      @include mixins.margin-bottom(1);
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    // Headings
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      @include mixins.margin-top(2);
+      @include mixins.margin-bottom(1);
+    }
+
+    h1 {
+      font-size: variables.$typography-base-font-size * 2;
+    }
+
+    h2 {
+      font-size: variables.$typography-base-font-size * 1.5;
+    }
+
+    h3 {
+      font-size: variables.$typography-base-font-size * 1.25;
+    }
+
+    // Lists
+    ul, ol {
+      @include mixins.margin-bottom(1);
+      padding-left: 1.5rem;
+    }
+
+    li {
+      @include mixins.margin-bottom(0.5);
+    }
+
+    // Code blocks
+    code {
+      background: hsl(var(--color-muted));
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    pre {
+      @include mixins.margin-bottom(1);
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+
+      code {
+        background: none;
+        padding: 0;
+      }
+    }
+
+    // Blockquotes
+    blockquote {
+      border-left: 4px solid hsl(var(--color-primary));
+      padding-left: 1rem;
+      @include mixins.margin(1, 0);
+      font-style: italic;
+      color: hsl(var(--color-foreground) / 0.8);
+    }
+
+    // Images
+    img {
+      max-width: 100%;
+      height: auto;
+      @include mixins.margin(1, 0);
+    }
+
+    // Tables - same as post-content
+    table {
+      width: 100%;
+      max-width: variables.$layout-post-width;
+      margin: 3rem auto;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.95rem;
+      position: relative;
+      background: hsl(var(--color-background));
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 16px;
+        padding: 2px;
+        background: linear-gradient(
+          135deg,
+          hsl(var(--color-primary) / 0.3),
+          hsl(var(--color-primary) / 0.1),
+          transparent
+        );
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      box-shadow:
+        0 0 0 1px hsl(var(--color-border) / 0.2),
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      border-radius: 16px;
+      overflow: hidden;
+
+      thead {
+        background: linear-gradient(
+          135deg,
+          hsl(var(--color-muted)) 0%,
+          hsl(var(--color-background)) 100%
+        );
+        border-bottom: 2px solid hsl(var(--color-primary) / 0.15);
+
+        th {
+          padding: 1.25rem 1.5rem;
+          text-align: left;
+          font-weight: 600;
+          font-size: 0.875rem;
+          color: hsl(var(--color-foreground) / 0.9);
+          text-transform: uppercase;
+          letter-spacing: 0.8px;
+          position: relative;
+
+          &:first-child {
+            width: 1%;
+            white-space: nowrap;
+          }
+
+          &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 25%;
+            height: 50%;
+            width: 1px;
+            background: hsl(var(--color-border) / 0.3);
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          position: relative;
+
+          &:not(:last-child) {
+            td {
+              border-bottom: 1px solid hsl(var(--color-border) / 0.1);
+            }
+          }
+        }
+
+        td {
+          padding: 1.25rem 1.5rem;
+          color: hsl(var(--color-foreground) / 0.85);
+          position: relative;
+          vertical-align: middle;
+
+          &:first-child {
+            font-weight: 500;
+            color: hsl(var(--color-foreground));
+            position: relative;
+            padding-left: 1.75rem;
+            width: 1%;
+            white-space: nowrap;
+          }
+
+          a {
+            color: hsl(var(--color-primary));
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              width: 0;
+              height: 1px;
+              background: hsl(var(--color-primary));
+              transition: width 0.2s ease;
+            }
+
+            &:hover::after {
+              width: 100%;
+            }
+          }
+
+          strong {
+            color: hsl(var(--color-foreground));
+            font-weight: 600;
+          }
+        }
+      }
+
+      &:not(:has(thead)) {
+        tbody {
+          tr:first-child {
+            td {
+              padding-top: 1.5rem;
+            }
+          }
+
+          tr:last-child {
+            td {
+              padding-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

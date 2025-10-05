@@ -1,11 +1,18 @@
 import React, { type FC } from "react";
 import { graphql } from "gatsby";
+import { marked } from "marked";
 
 import { Meta } from "@/components/meta";
 import { Page } from "@/components/page";
 import { Layout } from "@/components/layout";
 import { Sidebar } from "@/components/sidebar";
 import { useSiteMetadata } from "@/hooks/use-site-metadata";
+
+// Configure marked to support GitHub Flavored Markdown
+marked.setOptions({
+  gfm: true, // Enable GitHub Flavored Markdown
+  breaks: true, // Enable line breaks
+});
 
 interface PageTemplateProps {
   data: {
@@ -33,13 +40,16 @@ const PageTemplate: FC<PageTemplateProps> = ({ data }) => {
     );
   }
 
-  const { content: body, title } = post;
+  const { content, title } = post;
+
+  // Convert markdown content to HTML
+  const htmlContent = marked(content || '');
 
   return (
     <Layout>
       <Sidebar />
       <Page title={title}>
-        <div dangerouslySetInnerHTML={{ __html: body }} />
+        <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
       </Page>
     </Layout>
   );
