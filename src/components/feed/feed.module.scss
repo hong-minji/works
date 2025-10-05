@@ -17,12 +17,12 @@
       @include mixins.margin-bottom(0.5);
 
       .link {
-        color: hsl(var(--color-foreground) / 0.6); // Gray color (60% opacity)
+        color: hsl(var(--color-foreground)); // Black color
 
         &:hover,
         &:focus {
-          border-bottom: 1px solid hsl(var(--color-foreground) / 0.6);
-          color: hsl(var(--color-foreground) / 0.6);
+          border-bottom: 1px solid hsl(var(--color-foreground));
+          color: hsl(var(--color-foreground));
         }
       }
     }
