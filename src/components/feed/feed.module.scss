@@ -10,8 +10,8 @@
     }
 
     .title {
-      // Reduced to 60% of original size (1.6875 * 0.6 = 1.0125)
-      font-size: variables.$typography-base-font-size * 1.0125;
+      // Reduced to 70% of original size (1.6875 * 0.7 = 1.18125)
+      font-size: variables.$typography-base-font-size * 1.18125;
       @include mixins.line-height(1.2);
       @include mixins.margin-top(0);
       @include mixins.margin-bottom(0.5);
@@ -37,7 +37,8 @@
     .meta {
       .time {
         color: hsl(var(--color-foreground));
-        font-size: variables.$typography-small-font-size;
+        // Reduced to 80% of original size (14px * 0.8 = 11.2px)
+        font-size: variables.$typography-base-font-size * 0.7;
         font-weight: 600;
         text-transform: uppercase;
       }
@@ -51,7 +52,8 @@
           font-weight: 600;
           text-transform: uppercase;
           color: hsl(var(--color-primary));
-          font-size: variables.$typography-small-font-size;
+          // Reduced to 80% of original size (14px * 0.8 = 11.2px)
+          font-size: variables.$typography-base-font-size * 0.7;
         }
       }
     }

@@ -30,48 +30,48 @@ h6 {
 }
 
 h1 {
-  // Font size: 60% of original (2.5 * 0.6 = 1.5)
-  font-size: variables.$typography-base-font-size * 1.5;
+  // Font size: 70% of original (2.5 * 0.7 = 1.75)
+  font-size: variables.$typography-base-font-size * 1.75;
   @include mixins.line-height(1.4);
   @include mixins.margin-top(2.5);
   @include mixins.margin-bottom(0.6);
 }
 
 h2 {
-  // Font size: 60% of original (1.6875 * 0.6 = 1.0125)
-  font-size: variables.$typography-base-font-size * 1.0125;
+  // Font size: 70% of original (1.6875 * 0.7 = 1.18125)
+  font-size: variables.$typography-base-font-size * 1.18125;
   @include mixins.line-height(1.15);
   @include mixins.margin-top(1.2);
   @include mixins.margin-bottom(0.3);
 }
 
 h3 {
-  // Font size: 60% of original (1.375 * 0.6 = 0.825)
-  font-size: variables.$typography-base-font-size * 0.825;
+  // Font size: 70% of original (1.375 * 0.7 = 0.9625)
+  font-size: variables.$typography-base-font-size * 0.9625;
   @include mixins.line-height(0.8);
   @include mixins.margin-top(1.2);
   @include mixins.margin-bottom(0.3);
 }
 
 h4 {
-  // Font size: 60% of original (1.2 * 0.6 = 0.72)
-  font-size: variables.$typography-base-font-size * 0.72;
+  // Font size: 70% of original (1.2 * 0.7 = 0.84)
+  font-size: variables.$typography-base-font-size * 0.84;
   @include mixins.line-height(0.8);
   @include mixins.margin-top(1);
   @include mixins.margin-bottom(0.3);
 }
 
 h5 {
-  // Font size: 60% of original (1.0 * 0.6 = 0.6)
-  font-size: variables.$typography-base-font-size * 0.6;
+  // Font size: 70% of original (1.0 * 0.7 = 0.7)
+  font-size: variables.$typography-base-font-size * 0.7;
   @include mixins.line-height(0.8);
   @include mixins.margin-top(1.5);
   @include mixins.margin-bottom(0.3);
 }
 
 h6 {
-  // Font size: 60% of original (1.0 * 0.6 = 0.6)
-  font-size: variables.$typography-base-font-size * 0.6;
+  // Font size: 70% of original (1.0 * 0.7 = 0.7)
+  font-size: variables.$typography-base-font-size * 0.7;
   @include mixins.line-height(0.8);
   @include mixins.margin-top(1.5);
   @include mixins.margin-bottom(0.3);

@@ -7,8 +7,8 @@
   @include mixins.padding(0, 0.5);
 
   .title {
-    // Reduced to 60% of original size (2 * 0.6 = 1.2)
-    font-size: variables.$typography-base-font-size * 1.2;
+    // Reduced to 70% of original size (2 * 0.7 = 1.4)
+    font-size: variables.$typography-base-font-size * 1.4;
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
@@ -236,8 +236,8 @@
     @include mixins.padding-equal(0);
 
     .title {
-      // Reduced to 60% of original desktop size (3 * 0.6 = 1.8)
-      font-size: variables.$typography-base-font-size * 1.8;
+      // Reduced to 70% of original desktop size (3 * 0.7 = 2.1)
+      font-size: variables.$typography-base-font-size * 2.1;
       @include mixins.line-height(2.25);
       @include mixins.margin-top(2.25);
       @include mixins.margin-bottom(1.5);
