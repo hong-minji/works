@@ -1,5 +1,6 @@
 import { notion } from "./client";
 import { retryWithBackoff } from "./utils";
+import { downloadImage } from "./image-downloader";
 import type {
   BlockObjectResponse,
   RichTextItemResponse,
@@ -41,7 +42,7 @@ async function processBlockWithChildren(
   let markdown = "";
 
   // Process the current block
-  const blockContent = blockToMarkdown(block, indentLevel);
+  const blockContent = await blockToMarkdown(block, indentLevel);
   if (blockContent) {
     markdown = blockContent;
   }
@@ -114,7 +115,7 @@ async function fetchAllBlocks(pageId: string): Promise<BlockObjectResponse[]> {
   return blocks;
 }
 
-function blockToMarkdown(block: BlockObjectResponse, indentLevel: number = 0): string {
+async function blockToMarkdown(block: BlockObjectResponse, indentLevel: number = 0): Promise<string> {
   const type = block.type;
   const indent = "  ".repeat(indentLevel);
 
@@ -171,15 +172,19 @@ function blockToMarkdown(block: BlockObjectResponse, indentLevel: number = 0): s
       return `${indent}---`;
 
     case "image":
-      const imageUrl =
+      const originalImageUrl =
         block.image.type === "external"
           ? block.image.external.url
           : block.image.file.url;
+
+      // Download image and get local path
+      const localImagePath = await downloadImage(originalImageUrl);
+
       const caption =
         block.image.caption.length > 0
           ? richTextToMarkdown(block.image.caption)
           : "Image";
-      return `${indent}![${caption}](${imageUrl})`;
+      return `${indent}![${caption}](${localImagePath})`;
 
     case "video":
       const videoUrl =

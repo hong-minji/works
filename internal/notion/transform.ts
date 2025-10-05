@@ -1,6 +1,7 @@
 import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { NotionPostFrontmatter } from "../../src/types/notion-post";
 import { convertBlocksToMarkdown } from "./markdown-converter";
+import { downloadImage } from "./image-downloader";
 
 export async function transformNotionPage(
   page: PageObjectResponse
@@ -73,6 +74,18 @@ export async function transformNotionPage(
   // Get template with better defaults
   const template = (getSelect(properties.Template) || "post") as "post" | "page";
 
+  // Get social image and download if exists
+  const socialImageUrl = getFiles(properties["Social Image"]);
+  let socialImage: string | undefined = undefined;
+  if (socialImageUrl) {
+    try {
+      socialImage = await downloadImage(socialImageUrl);
+    } catch (error) {
+      console.error(`Failed to download social image for ${title}:`, error);
+      socialImage = socialImageUrl; // Fallback to original URL
+    }
+  }
+
   const frontmatter: NotionPostFrontmatter = {
     title,
     slug,
@@ -82,7 +95,7 @@ export async function transformNotionPage(
     description: getText(properties.Description) || "",
     draft: getCheckbox(properties.Draft),
     template,
-    socialImage: getFiles(properties["Social Image"]),
+    socialImage,
   };
 
   const content = await convertBlocksToMarkdown(page.id);
