@@ -311,18 +311,40 @@ async function processTableBlock(tableBlock: BlockObjectResponse): Promise<strin
 }
 
 function richTextToMarkdown(richTexts: RichTextItemResponse[]): string {
-  return richTexts
-    .map((text) => {
-      let result = text.plain_text;
+  // Group consecutive texts with same formatting
+  const groups: Array<{texts: RichTextItemResponse[], annotations: any, href?: string}> = [];
 
-      if (text.annotations.bold) result = `**${result}**`;
-      if (text.annotations.italic) result = `*${result}*`;
-      if (text.annotations.code) result = `\`${result}\``;
-      if (text.annotations.strikethrough) result = `~~${result}~~`;
+  for (const text of richTexts) {
+    const lastGroup = groups[groups.length - 1];
+    const isSameFormat = lastGroup &&
+      lastGroup.annotations.bold === text.annotations.bold &&
+      lastGroup.annotations.italic === text.annotations.italic &&
+      lastGroup.annotations.code === text.annotations.code &&
+      lastGroup.annotations.strikethrough === text.annotations.strikethrough &&
+      lastGroup.href === text.href;
 
-      if (text.href) result = `[${result}](${text.href})`;
+    if (isSameFormat) {
+      lastGroup.texts.push(text);
+    } else {
+      groups.push({
+        texts: [text],
+        annotations: text.annotations,
+        href: text.href
+      });
+    }
+  }
 
-      return result;
-    })
-    .join("");
+  // Convert each group to markdown
+  return groups.map(group => {
+    let result = group.texts.map(t => t.plain_text).join("");
+
+    if (group.annotations.bold) result = `**${result}**`;
+    if (group.annotations.italic) result = `*${result}*`;
+    if (group.annotations.code) result = `\`${result}\``;
+    if (group.annotations.strikethrough) result = `~~${result}~~`;
+
+    if (group.href) result = `[${result}](${group.href})`;
+
+    return result;
+  }).join("");
 }
