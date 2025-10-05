@@ -10,8 +10,9 @@
     }
 
     .title {
-      font-size: variables.$typography-base-font-size * 1.6875;
-      @include mixins.line-height(1.5);
+      // Reduced to 60% of original size (1.6875 * 0.6 = 1.0125)
+      font-size: variables.$typography-base-font-size * 1.0125;
+      @include mixins.line-height(1.2);
       @include mixins.margin-top(0);
       @include mixins.margin-bottom(0.5);
 
