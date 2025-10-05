@@ -1,10 +1,15 @@
-import { createWriteStream, existsSync, mkdirSync } from "fs";
+import { createWriteStream, existsSync, mkdirSync, readFileSync } from "fs";
 import { pipeline } from "stream/promises";
 import { join } from "path";
-import crypto from "crypto";
+import * as crypto from "crypto";
+
+// config.json 읽기
+const configPath = join(process.cwd(), "content", "config.json");
+const configData = JSON.parse(readFileSync(configPath, "utf-8"));
 
 // 이미지를 저장할 디렉토리 경로
 const IMAGES_DIR = join(process.cwd(), "static", "notion-images");
+const PATH_PREFIX = configData.pathPrefix || "";
 
 // 디렉토리가 없으면 생성
 if (!existsSync(IMAGES_DIR)) {
@@ -37,7 +42,7 @@ function generateFileName(url: string): string {
 /**
  * 이미지 다운로드 및 로컬 경로 반환
  * @param imageUrl Notion 이미지 URL
- * @returns 로컬 이미지 경로 (/notion-images/filename.ext)
+ * @returns 로컬 이미지 경로 (pathPrefix/notion-images/filename.ext)
  */
 export async function downloadImage(imageUrl: string): Promise<string> {
   try {
@@ -49,7 +54,7 @@ export async function downloadImage(imageUrl: string): Promise<string> {
     // 파일명 생성
     const fileName = generateFileName(imageUrl);
     const filePath = join(IMAGES_DIR, fileName);
-    const publicPath = `/notion-images/${fileName}`;
+    const publicPath = `${PATH_PREFIX}/notion-images/${fileName}`;
 
     // 이미 다운로드된 파일이 있으면 재사용
     if (existsSync(filePath)) {
