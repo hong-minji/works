@@ -119,6 +119,11 @@
           letter-spacing: 0.8px;
           position: relative;
 
+          &:first-child {
+            width: 1%;
+            white-space: nowrap;
+          }
+
           &:not(:last-child)::after {
             content: '';
             position: absolute;
@@ -155,6 +160,8 @@
             color: hsl(var(--color-foreground));
             position: relative;
             padding-left: 1.75rem;
+            width: 1%;
+            white-space: nowrap;
           }
 
           // Links in tables
