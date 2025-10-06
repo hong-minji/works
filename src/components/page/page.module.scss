@@ -10,6 +10,7 @@
   }
 
   .title {
+    display: none; // Hide page title
     font-weight: 600;
     font-size: variables.$typography-base-font-size * 2.5 * 0.7; // 70% of original size
     color: hsl(var(--color-foreground) / 0.6); // Gray color (60% opacity)
