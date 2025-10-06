@@ -41,7 +41,7 @@ $typography-base-font-size: 16px;
 $typography-small-font-size: 14px;
 $typography-base-line-height: 1.625;
 $typography-leading: math.round(16 * math.div($typography-root-font-size, 100) * $typography-base-line-height);
-$typography-font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+$typography-font-family: "Pretendard Variable", Pretendard, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 
 $button-height: 40px;
 $button-border-radius: 20px;
