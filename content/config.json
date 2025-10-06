@@ -14,10 +14,6 @@
     {
       "title": "About me",
       "url": "/pages/about"
-    },
-    {
-      "title": "Contact me",
-      "url": "/pages/contacts"
     }
   ],
   "author": {
